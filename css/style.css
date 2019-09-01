@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:700');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+@font-face {
+    font-family: San-Francisco;
+    src: url(css/fonts/san-francisco.otf);
+}
+
+* {
+    box-sizing: border-box;
+    /*    rem*/
+    font-size: 16px;
+
+}
+
+body {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#introBanner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*very important*/
+    background-image: url(media/puddle_city_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img {
+    opacity: 0.7;
+}
+
+#menuBar {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 50px;
+    background-color: none;
+    display: none;
+    margin: 15px 15px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 100%;
+    /*dependent on menuBar width.*/
+    height: 13px;
+    background-color: black;
+    /*change it to white when responsive, so it stands out against the dark city background*/
+    margin: 5px 0px;
+    transition: 0.4s;
+    transition-timing-function: ease;
+}
+
+.bar1 {
+    margin-top: 0px;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-18px, 4px);
+    width: 70px;
+
+}
+
+.change .bar2 {
+    opacity: 0;
+
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-15px, -12px);
+    width: 70px;
+}
+
+#nav {
+    text-align: center;
+    width: 100%;
+    /*	background-color: rgb(20, 20, 20, 0.4);*/
+    float: right;
+    font-size: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600
+}
+
+#nav ul li {
+    display: inline-block;
+    float: right;
+    margin: 8px 20px;
+    padding: 5px 10px;
+    transition: background-color, border-radius;
+    transition-duration: 500ms;
+    font-size: 40px;
+}
+
+#nav ul li a {
+    color: rgb(240, 240, 240);
+    text-decoration-line: none;
+    padding: 3px;
+    transition: color;
+    transition-duration: 500ms;
+}
+
+#nav ul li:hover {
+    border-radius: 25px;
+    background-color: rgba(10, 10, 10, 0.8)
+}
+
+#responsiveNavLinks li {
+    float: none;
+}
+
+#header {
+    position: relative;
+    /*    min-width: 300px;*/
+    min-width: 300px;
+    /*    max-width: 1000px;*/
+    height: auto;
+    margin: 10% 0px 0px 10.4%;
+}
+
+#header h1 {
+    font-size: 7.5rem;
+    font-family: 'Oxygen', 'sans-serif';
+    color: white;
+}
+
+#subHeader {
+    position: relative;
+    min-width: auto;
+    max-width: 900px;
+    height: auto;
+    margin: 2% 0px 0px 10.4%;
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+#subHeader h1 {
+    font-size: 4.5rem;
+    font-family: 'Oxygen', 'sans-serif';
+    color: white;
+}
+
+.span {
+    color: rgb(0, 250, 255);
+    /*change if necessary*/
+}
+
+#header h1 span {
+    background-color: rgba(10, 10, 10, 0.4);
+    border-radius: 5px
+}
+
+#aboutMeContainer {
+    z-index: 25;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    /*    min-width:100%;*/
+    background-image: url(media/cool_city_lights.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -webkit-background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -moz-background-repeat: no-repeat;
+}
+
+/*
+#aboutMeContainer img{
+    background-size: cover;
+    background-position: center;
+    width:100%; 
+    height:100%;
+}
+*/
+
+#aboutMeHeader {
+    margin: 0px auto;
+    width: 90%;
+    height: 150px;
+    display: flex;
+}
+
+.aboutMeLeft {
+    flex-grow: 4;
+    height: 50%;
+    border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+.aboutMeRight {
+    flex-grow: 4;
+    height: 50%;
+    border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+#aboutMeHeader h1 {
+    font-family: 'Varela', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    padding: 2.13rem 0px;
+    flex-grow: 0.5;
+    color: rgb(235, 235, 235);
+}
+
+#aboutMeText {
+    width: 90%;
+    height: 450px;
+    margin: 0px auto;
+    /*79 px*/
+    color: rgb(240, 240, 240);
+    font-family: sans-serif;
+}
+
+#aboutMeText h1 {
+    color: rgba(240, 240, 240, 1);
+    font-size: 4rem;
+    font-family: 'Oxygen', sans-serif;
+    padding: 10px
+}
+
+#aboutMeText h3 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-left: 8px solid rgba(0, 191, 255);
+    overflow: hidden;
+}
+
+#whoIAmContainer,
+#skillsContainer {
+    height: 50%;
+    width: 50%;
+    /*    border:1px solid white; */
+}
+
+#portfolioContainer {
+    position: absolute;
+    top: 200%;
+
+    /*
+    background-image: url(media/city_at_night_with_stars.jpg);
+    background-size: cover;
+    background-position: center;
+*/
+
+    width: 100%;
+    height: 100%;
+}
+
+#portfolioHeader {
+    color: rgb(20, 20, 20);
+    text-align: center;
+}
+
+#portfolioHeader h1 {
+    font-size: 5rem;
+    font-family: sans-serif;
+    padding: 0.8rem;
+    width: 400px;
+    margin: 0px auto;
+    /*    box-shadow: 5px 10px 20px*/
+}
+
+#portfolioImageContainer {
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-shrink: 2;
+}
+
+.flexItem {
+    width: 45%;
+    height: 296px;
+    margin: 20px auto;
+    border: 3px solid grey;
+    transition: transform 200ms ease-in-out;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+
+#image {
+    /*image in the portfolio flexItem boxes. Usually will be a screenshot of the website template.*/
+    width: 100%;
+    height: 100%;
+    background: url(media/question-mark-logo-icon-76440.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(200, 200, 200);
+}
+
+#text {
+    padding: 0px 10px
+}
+
+#text h1 {
+    font-size: 2rem;
+    font-family: 'Oxygen', sans-serif;
+    padding: 5px 0px;
+}
+
+#subtext {
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 2px 0px;
+}
+
+.flexItem:hover {
+    transform: scale(1.1)
+}
+
+#footer {
+    /*not responsive*/
+    /*desktop*/
+    position: absolute;
+    /*NOT RESPONSIVE!! must be within portfolioContainer div to work with this code.*/
+    width: 100%;
+    min-height: 200px;
+    height: 260px;
+    margin-top: 0px;
+    background-color: rgb(30, 30, 30);
+}
+
+
+#socialMedia {
+    display: flex;
+    width: 320px;
+    height: auto;
+    margin: 0px auto;
+    padding: 0px;
+    display: block;
+    justify-content: center;
+}
+
+.icon {
+    width: 64px;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 20px;
+}
+
+#buttonContainer {
+    position: absolute;
+    display: flex;
+    bottom: 25px;
+    right: 25px;
+    height: 200px;
+    flex-direction: column
+}
+
+.footerButton {
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+    width: 250px;
+    height: 62px;
+    text-align: center;
+    border: 3px solid rgb(240, 240, 240);
+    border-left: 3px solid rgb(240, 240, 240);
+    border-right: 3px solid rgb(240, 240, 240);
+    border-top: 2px solid rgb(240, 240, 240);
+    border-bottom: 2px solid rgb(240, 240, 240);
+    margin: 2px 0px;
+    transition: background-color 200ms ease-in;
+    cursor: pointer
+}
+
+.footerButton h1 {
+    font-family: "Oxygen", sans-serif;
+    font-size: 2.5rem;
+    padding: 10px 0px;
+}
+
+.footerButton:hover {
+    background-color: rgb(240, 240, 240);
+    color: rgb(30, 30, 30);
+}
+
+#f-aboutMeContainer:hover,
+#f-portfolioContainer:hover {
+    transition: color 200ms ease-in-out;
+    color: rgb(30, 30, 30)
+}
+
+#copyright {
+    position: absolute;
+    text-align: center;
+    color: rgb(240, 240, 240);
+    /*    top:100%;*/
+    bottom: 0px;
+    width: 100%
+}
+
+#copyright h1 {
+    width: auto;
+    font-family: sans-serif;
+}
+
+#footerDescription {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 240px;
+    text-align: center;
+}
+
+#footerDescription h2 {
+    color: rgb(220, 220, 220);
+    font-family: sans-serif;
+
+}
+
+#portfolioButton a,
+#aboutMeButton a {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+
+/*
+    #beyond will be typed.js css, and media queries. Continue at your discretion.
+*/
+@media only screen and (max-width:1350px) {
+
+    /*strictly for the aboutme section*/
+    #aboutMeText {
+        height: auto;
+    }
+
+    #whoIAmContainer {
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.6);
+
+    }
+
+    #skillsContainer {
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.6);
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:1275px) {
+
+    /*desktop screens*/
+    #responsiveNavLinks {
+        display: none;
+    }
+
+    .img {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+
+    /*desktop nav breaks at ~1274px.
+    for tablets and below, for now.
+    when screen <= 1024px
+    */
+    .img {
+        opacity: 0.7;
+    }
+
+    #menuBar {
+        z-index: 40;
+        display: block;
+    }
+
+    #nav ul {
+        /*jquery, show*/
+        display: none;
+        z-index: 30;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(30, 30, 30, 1);
+    }
+
+    #nav ul li {
+        /*jquery, onClick*/
+        display: block;
+        color: white;
+        width: 300px;
+        padding: 30px;
+        margin: 0px auto;
+        border: none;
+        float: none
+    }
+
+    #nav ul li:first-child {
+        /*jquery, onClick*/
+        color: white;
+        margin-top: 90px;
+    }
+
+    #nav ul li a {
+        /*jquery, onClick*/
+        color: white;
+    }
+
+    #introBanner img {
+        margin: 0px;
+        min-width: 0px;
+        background-size: cover;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        /*jquery*/
+        background-color: white;
+    }
+
+    #portfolioContainer {
+        width: 100%
+    }
+
+    #portfolioImageContainer {
+        width: 100%;
+        margin: 0px auto;
+        /*        height:100%;*/
+    }
+
+    #footer {
+        top: 100%
+    }
+
+}
+
+
+
+@media only screen and (max-width:550px) {
+
+    /*phones*/
+    #responsiveNavLinks {
+        width: 100%;
+        position: fixed;
+        z-index: 30;
+    }
+
+    #nav ul {
+        position: fixed
+    }
+
+    #nav ul li {
+        margin: 5px auto;
+        padding: 30px;
+        border: none;
+        float: none;
+    }
+
+    #header {
+        margin: 100px 0px 0px 25px;
+        width: 90%;
+    }
+
+    #header h1 {
+        font-size: 5.5rem;
+    }
+
+    #subHeader {
+        margin: 10px 0px 0px 25px;
+        width: 90%;
+    }
+
+    #subHeader h1 {
+        font-size: 2rem
+    }
+
+    #aboutMeHeader {
+        width: 100%;
+        border
+    }
+
+    #aboutMeHeader h1 {
+        font-size: 4.5rem;
+    }
+
+    #whoIAmContainer h1,
+    #skillsContainer h1 {
+        font-size: 2.5rem
+    }
+
+    #whoIAmContainer h3,
+    #skillsContainer h3 {
+        font-size: 1.15rem;
+        border-left: 7px solid rgba(0, 191, 255);
+    }
+
+    .aboutMeLeft {
+        display: none;
+    }
+
+    .aboutMeRight {
+        display: none
+    }
+
+    #aboutMeHeader {
+        height: 140px;
+    }
+
+    #aboutMeHeader h1 {
+        margin: 0px auto;
+        font-size: 4rem;
+    }
+
+
+    #portfolioHeader {
+        width: 100%;
+    }
+
+    #portfolioHeader h1 {
+        font-size: 4rem;
+        width: 100%;
+    }
+
+    #portfolioContainer {
+        height: auto;
+    }
+
+    #portfolioImageContainer {
+        margin-top: 0px;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .flexItem {
+        width: 100%;
+        height: 20rem;
+        margin: 10px auto;
+        transition: none;
+    }
+
+    .flexItem:hover {
+        transform: scale(1);
+    }
+
+    #footer {
+        position: relative;
+        height: 550px
+    }
+
+    #socialMedia {
+        margin: 10px auto;
+    }
+
+    #buttonContainer {
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        margin: 20px 50px;
+    }
+
+    .footerButton {
+        width: 100%;
+    }
+
+    #footerDescription {
+        position: relative;
+        margin: 0px auto;
+        margin-bottom: 0px;
+    }
+
+
+}
+
+@media only screen
+
+/*iPad in PORTRAIT mode*/
+and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #footer {
+        height: 350px;
+    }
+
+    #footerDescription {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        margin-left: 50px;
+    }
+
+    #buttonContainer {
+        margin-right: 60px;
+        margin-bottom: 0px;
+    }
+}

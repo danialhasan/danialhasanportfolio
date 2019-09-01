@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137167077-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137167077-1');
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="Web Developer, Web Designer, advanced, intermediate, effective, responsible, resume, Danial Hasan">
+    <meta name="description" content="Hi, my name is Danial Hasan and I'm a web developer. Come take a look at my portfolio!">
+    <meta name="author" content="Danial Hasan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <!--    <meta http-equiv="refresh" content="5"> -->
+    <!--refresh content on page [x] seconds-->
+    <title>Danial Hasan</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="introBanner">
+        <div id="nav">
+            <div id="menuBar" onclick="animateMenuBar(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul id="desktopNavLinks">
+                <!--the 'd-' is to specify that it is the desktop class.-->
+                <li><a href="#footer" id="d-contactMeLink">Contact Me</a></li>
+                <li><a href="#portfolioContainer" id="d-portfolioLink">Portfolio</a></li>
+                <li><a href="#aboutMeContainer" id="d-aboutMeLink">About Me</a></li>
+            </ul>
+            <ul id="responsiveNavLinks">
+                <!--the 'm-' is to specify that it is the mobile class.-->
+                <li><a href="#aboutMeContainer" id="m-aboutMeLink">About Me</a></li>
+                <li><a href="#portfolioContainer" id="m-portfolioLink">Portfolio</a></li>
+                <li><a href="#footer" id="m-contactMeLink">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <div id="header">
+            <h1>Hi, my name is<br><span>Danial Hasan.</span></h1>
+        </div>
+        <div id="subHeader">
+            <h1>I'm a <span class="span"></span></h1>
+        </div>
+    </div>
+    <!--    start of 'about me' section-->
+    <div id="aboutMeContainer">
+        <div id="aboutMeHeader">
+            <div class="aboutMeLeft"></div>
+            <!--to give lines on left side of aboutMe-->
+            <h1>About Me</h1>
+            <div class="aboutMeRight"></div>
+            <!--to give lines on right side of aboutMe-->
+        </div>
+        <div id="aboutMeText">
+            <div id="whoIAmContainer">
+                <h1>Who I Am</h1>
+                <h3>My name is Danial Hasan, and I am a 15 year old web developer. My passions include working with various technologies, challenging myself and building different things. I was born and raised in Toronto, Canada and plan to travel the world when I am older. </h3>
+            </div>
+
+            <div id="skillsContainer">
+                <h1>Skills</h1>
+                <h3>I am skilled in different programming languages, such as HTML, CSS, Javascript and a little bit of [insert language here]. I am mainly proficient in Web Design, as per my portfolio of templates. I have made it my goal to learn as many relevant programming languages as I am comfortable with, so I can further my skillset.</h3>
+            </div>
+        </div>
+    </div>
+    <div id="portfolioContainer">
+        <div id="portfolioHeader">
+    <h1>Portfolio</h1>
+        </div>
+        <div id="portfolioImageContainer">
+            <div id="flexItem1" class="flexItem">
+                <div id="image"></div>
+<!--
+                <div id="text">
+                    <h1>Compact layout </h1>
+                    <div id="subtext">This website has an elegant, carefree theme. Perfect for advertising your restaurant or something.</div>
+                </div>
+-->
+            </div>
+            <div id="flexItem2" class="flexItem">
+                <div id="image"></div>
+<!--
+                <div id="text">
+                    <h1>landing site</h1>
+                    <div id="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dicta, dolore excepturi eos fuga ratione corporis rem </div>
+                </div>
+-->
+            </div>
+            <div id="flexItem3" class="flexItem">
+                <div id="image"></div>
+<!--
+                <div id="text">
+                    <h1> advertising</h1>
+                    <div id="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ratione sint, qui enim, et voluptatum quaerat ipsum </div>
+                </div>
+-->
+            </div>
+            <div id="flexItem4" class="flexItem">
+                <div id="image"></div>
+<!--
+                <div id="text">
+                    <h1>auto/biography</h1>
+                    <div id="subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam excepturi nemo culpa ratione provident repellat, perferendis</div>
+                </div>
+-->
+            </div>
+        </div>
+        <div id="footer">
+            <div id="socialMedia">
+                <div class="icon" id="ig">
+                    <a href="https://www.instagram.com/danialhasan752" target="_blank">
+                        <img src="css/media/insta_icon_desktop.png" alt="my instagram">
+                    </a>
+                </div>
+                <div class="icon" id="github">
+                    <a href="https://www.github.com/redreaper752" target="_blank">
+                        <img src="css/media/github_64px.png" alt="my github">
+                    </a>
+                </div>
+                <div class="icon" id="twitter">
+                    <a href="https://www.twitter.com/DanialHasan15" target="_blank">
+                        <img src="css/media/twitter_icon_desktop.png" alt="my twitter">
+                    </a>
+                </div>
+            </div>
+            <div id="buttonContainer">
+                <div id="aboutMeButton" class="footerButton">
+                    <a href="#aboutMeContainer" id="f-aboutMeContainer">
+                        <h1>About Me</h1>
+                    </a>
+                </div>
+                <div id="portfolioButton" class="footerButton">
+                    <a href="#portfolioContainer" id="f-portfolioContainer">
+                        <h1>Portfolio</h1>
+                    </a>
+                </div>
+                <div id="contactMeBtn" class="footerButton">
+                    <h1>Contact Me</h1>
+                </div>
+            </div>
+            <div id="footerDescription">
+                <h2>This was a fun little side project I made to test out my development skills. It took me around a month of work to create, and I look forward to working on fun new projects. This website was created via bare bones HTML, CSS, and JS/jQuery.</h2>
+            </div>
+            <!--
+            <div id="copyright">
+                <h1>© Danial Hasan <span id="copyrightYear">2018</span></h1>
+            </div>
+-->
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script_typed.js"></script>
+    <script src="js/jQuery.js"></script>
+</body>
+
+</html>
